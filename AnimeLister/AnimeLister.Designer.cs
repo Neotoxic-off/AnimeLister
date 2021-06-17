@@ -39,6 +39,7 @@ namespace AnimeLister
             this.name_data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grade_data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.box = new System.Windows.Forms.GroupBox();
+            this.button_remove = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.box.SuspendLayout();
             this.SuspendLayout();
@@ -46,10 +47,12 @@ namespace AnimeLister
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button_remove);
             this.groupBox1.Controls.Add(this.Add);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.box_grade);
             this.groupBox1.Controls.Add(this.box_name);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(337, 100);
@@ -79,6 +82,7 @@ namespace AnimeLister
             // 
             // box_grade
             // 
+            this.box_grade.BackColor = System.Drawing.Color.Black;
             this.box_grade.FormattingEnabled = true;
             this.box_grade.Items.AddRange(new object[] {
             "N/A",
@@ -106,10 +110,12 @@ namespace AnimeLister
             // 
             // box_items
             // 
+            this.box_items.BackColor = System.Drawing.Color.Black;
             this.box_items.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.box_items.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name_data,
             this.grade_data});
+            this.box_items.ForeColor = System.Drawing.Color.White;
             this.box_items.HideSelection = false;
             this.box_items.Location = new System.Drawing.Point(6, 19);
             this.box_items.Name = "box_items";
@@ -131,12 +137,24 @@ namespace AnimeLister
             // box
             // 
             this.box.Controls.Add(this.box_items);
+            this.box.ForeColor = System.Drawing.Color.White;
             this.box.Location = new System.Drawing.Point(12, 118);
             this.box.Name = "box";
             this.box.Size = new System.Drawing.Size(337, 241);
             this.box.TabIndex = 2;
             this.box.TabStop = false;
             this.box.Text = " Anime View ";
+            // 
+            // button_remove
+            // 
+            this.button_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_remove.Location = new System.Drawing.Point(162, 62);
+            this.button_remove.Name = "button_remove";
+            this.button_remove.Size = new System.Drawing.Size(75, 23);
+            this.button_remove.TabIndex = 4;
+            this.button_remove.Text = "Remove";
+            this.button_remove.UseVisualStyleBackColor = true;
+            this.button_remove.Click += new System.EventHandler(this.button_remove_Click);
             // 
             // AnimeLister
             // 
@@ -173,6 +191,7 @@ namespace AnimeLister
         private System.Windows.Forms.ColumnHeader name_data;
         private System.Windows.Forms.ColumnHeader grade_data;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button button_remove;
     }
 }
 
